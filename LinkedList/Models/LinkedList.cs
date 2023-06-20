@@ -16,7 +16,6 @@ internal class LinkedList<T> : IEnumerable
     public LinkedList(T data) =>
         SetHeadAndTail(data);
 
-
     public void Clear()
     {
         Head = null;
