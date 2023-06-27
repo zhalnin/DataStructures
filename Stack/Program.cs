@@ -18,19 +18,56 @@ try
 
 
     var linkedStack = new LinkedStack<int>();
-    //linkedStack.Push(1);
-    //linkedStack.Push(2);
-    //linkedStack.Push(3);
-    //linkedStack.Push(4);
+    linkedStack.Push(10);
+    linkedStack.Push(20);
+    linkedStack.Push(30);
+    linkedStack.Push(40);
 
-    //var item5 = linkedStack.Peek();
-    //Console.WriteLine(item5);
+    var item5 = linkedStack.Peek();
+    Console.WriteLine(item5);
 
     var item3 = linkedStack.Pop();
     Console.WriteLine(item3);
 
-    //var item4 = linkedStack.Peek();
-    //Console.WriteLine(item4);
+    var item4 = linkedStack.Peek();
+    Console.WriteLine(item4);
+
+
+    var arrayStack = new ArrayStack<int>(5);
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Push(100);
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Push(200);
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Push(300);
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Push(400);
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Push(500);
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    //arrayStack.Push(600);
+
+    Console.WriteLine($"ArrayStack count: {arrayStack.MaxCount}");
+
+    var item7 = arrayStack.Peek();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    var item6 = arrayStack.Pop();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    var item8 = arrayStack.Peek();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Pop();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Pop();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Pop();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    arrayStack.Pop();
+    Console.WriteLine($"The current length: {arrayStack.Count}");
+    //arrayStack.Pop();
+
+    Console.WriteLine(item7);
+    Console.WriteLine(item6);
+    Console.WriteLine(item8);
 }
 catch (NullReferenceException ex)
 {
@@ -40,5 +77,7 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.ToString());
 }
-
-Console.ReadLine();
+finally
+{
+    Console.ReadLine();
+}
