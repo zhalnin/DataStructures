@@ -25,13 +25,30 @@ Console.WriteLine("Hello, World!");
 //Console.WriteLine(arrayQueue.Peek());
 //Console.WriteLine(arrayQueue.Dequeue());
 
-var linkedQueue = new LinkedQueue<int>();
-linkedQueue.Enqueue(1);
-linkedQueue.Enqueue(2);
-linkedQueue.Enqueue(3);
-linkedQueue.Enqueue(4);
-linkedQueue.Enqueue(5);
+//var linkedQueue = new LinkedQueue<int>();
+//linkedQueue.Enqueue(1);
+//linkedQueue.Enqueue(2);
+//linkedQueue.Enqueue(3);
+//linkedQueue.Enqueue(4);
+//linkedQueue.Enqueue(5);
 
-Console.WriteLine(linkedQueue.Dequeue());
-Console.WriteLine(linkedQueue.Peek());
-Console.WriteLine(linkedQueue.Dequeue());
+//Console.WriteLine(linkedQueue.Dequeue());
+//Console.WriteLine(linkedQueue.Peek());
+//Console.WriteLine(linkedQueue.Dequeue());
+
+var deque = new Deque<int>();
+deque.PushFront(1);
+deque.PushFront(2);
+deque.PushFront(3);
+
+deque.PushBack(40);
+deque.PushBack(50);
+
+deque.PushFront(600);
+deque.PushBack(700);
+
+Console.WriteLine(deque.PopFront());
+Console.WriteLine(deque.PopBack());
+Console.WriteLine(deque.PopFront());
+Console.WriteLine(deque.PopBack());
+
