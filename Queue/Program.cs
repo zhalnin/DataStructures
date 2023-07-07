@@ -67,5 +67,3 @@ Console.WriteLine(duplexLinkedQeque.PopFront());
 Console.WriteLine(duplexLinkedQeque.PopBack());
 Console.WriteLine(duplexLinkedQeque.PopBack());
 Console.WriteLine(duplexLinkedQeque.PopFront());
-
-
