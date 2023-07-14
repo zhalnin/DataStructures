@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoundLinkedList", "RoundLin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularLinkedList", "CircularLinkedList\CircularLinkedList.csproj", "{456A37DB-DCE7-4061-A8CB-BF524C557EE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{0D637491-B098-4892-9C00-E6CE4252C3C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj", "{0D637491-B098-4892-9C00-E6CE4252C3C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Set", "Set\Set.csproj", "{ADA73EA1-005B-43E0-93EF-D52CBD6DACA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0D637491-B098-4892-9C00-E6CE4252C3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D637491-B098-4892-9C00-E6CE4252C3C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D637491-B098-4892-9C00-E6CE4252C3C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA73EA1-005B-43E0-93EF-D52CBD6DACA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA73EA1-005B-43E0-93EF-D52CBD6DACA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA73EA1-005B-43E0-93EF-D52CBD6DACA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA73EA1-005B-43E0-93EF-D52CBD6DACA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
