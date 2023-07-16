@@ -11,10 +11,20 @@ easyHashTable.Add(777);
 Console.WriteLine(easyHashTable.Search(6));
 Console.WriteLine(easyHashTable.Search(18));
 
-HashTable<int, string> hashTable = new(100);
-hashTable.Add(5,"Hello");
-hashTable.Add(18,"World");
-hashTable.Add(777,"Bro");
+BetterHashTable<int, string> betterHashTable = new(100);
+betterHashTable.Add(5,"Hello");
+betterHashTable.Add(18,"World");
+betterHashTable.Add(777,"Bro");
 
-Console.WriteLine(hashTable.Search(6, "Peter"));
-Console.WriteLine(hashTable.Search(18, "World"));
+Console.WriteLine(betterHashTable.Search(6, "Peter"));
+Console.WriteLine(betterHashTable.Search(18, "World"));
+
+HashTable<Person> hashTable = new(100);
+var person = new Person() { Name = "Bob", Age = 41, Gender = 0 };
+hashTable.Add(new Person() { Name = "Alex", Age = 20, Gender = 0 });
+hashTable.Add(new Person() { Name = "Marina", Age = 15, Gender = 1 });
+hashTable.Add(new Person() { Name = "Lera", Age = 34, Gender = 1 });
+hashTable.Add(person);
+
+Console.WriteLine(hashTable.Search(new Person() { Name = "Marina", Age = 15, Gender = 1 }));
+Console.WriteLine(hashTable.Search(person));
