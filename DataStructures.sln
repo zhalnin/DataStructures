@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Set", "Set\Set.csproj", "{ADA73EA1-005B-43E0-93EF-D52CBD6DACA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "HashTable\HashTable.csproj", "{E219E1D2-7E04-401F-87B5-A078E85E6D76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashTable", "HashTable\HashTable.csproj", "{E219E1D2-7E04-401F-87B5-A078E85E6D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map", "Map\Map.csproj", "{0A064D70-1071-4F9D-8EC5-5A5FC9507ED6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{E219E1D2-7E04-401F-87B5-A078E85E6D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E219E1D2-7E04-401F-87B5-A078E85E6D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E219E1D2-7E04-401F-87B5-A078E85E6D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A064D70-1071-4F9D-8EC5-5A5FC9507ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A064D70-1071-4F9D-8EC5-5A5FC9507ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A064D70-1071-4F9D-8EC5-5A5FC9507ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A064D70-1071-4F9D-8EC5-5A5FC9507ED6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
