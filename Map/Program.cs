@@ -11,7 +11,7 @@ var easyMap = new EasyMap<int, string>
     new Item<int, string>(4, "Four"),
     new Item<int, string>(5, "Five")
 };
-
+Console.WriteLine("-------");
 foreach (var item in easyMap)
 {
     Console.WriteLine(item);
@@ -22,13 +22,12 @@ Console.WriteLine(easyMap.Search(3) ?? "Not found");
 
 easyMap.Remove(3);
 easyMap.Remove(1);
-
+Console.WriteLine("-------");
 foreach (var item in easyMap)
 {
     Console.WriteLine(item);
 }
 
-Console.WriteLine("----------------");
  
 var dict = new Dict<int, string>
 {
@@ -40,7 +39,7 @@ var dict = new Dict<int, string>
     new Item<int, string>(5, "Five"),
     new Item<int, string>(101, "Hundred")
 };
-
+Console.WriteLine("-------");
 foreach (var item in dict)
 {
     Console.WriteLine(item);
@@ -54,6 +53,7 @@ dict.Remove(3);
 dict.Remove(1);
 dict.Remove(101);
 
+Console.WriteLine("-------");
 foreach (var item in dict)
 {
     Console.WriteLine(item);

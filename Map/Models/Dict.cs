@@ -72,7 +72,49 @@ internal class Dict<TKey, TValue> : IEnumerable
 
         if (_items[hash].Key.Equals(key))
         {
-            _items[hash] = null;
+
+
+            var replaced = false;
+            for (int i = hash; i < size; i++)
+            {
+                if (_items[i] != null && !_items[i].Key.Equals(key) && key.Equals(GetHash(_items[i].Key)))
+                {
+                    _items[hash].Key = _items[i].Key;
+                    _items[hash].Value = _items[i].Value;
+                    //oldItem = _items[i];
+                    _items[i] = null;
+                    replaced = true;
+                    break;
+                }
+            }
+
+            if (!replaced)
+            {
+                for (int i = 0; i < hash; i++)
+                {
+                    if (_items[i] != null && !_items[i].Key.Equals(key) && key.Equals(GetHash(_items[i].Key)))
+                    {
+                        _items[hash].Key = _items[i].Key;
+                        _items[hash].Value = _items[i].Value;
+                        //oldItem = _items[i];
+                        _items[i] = null;
+                        replaced = true;
+                        break;
+                    }
+                }
+            }
+
+            //if (oldItem != null)
+            //{
+            //    oldItem.Key = _items[hash].Key;
+            //    oldItem.Value = _items[hash].Value;
+            //    _items[hash] = oldItem;
+            //    //oldItem = null;
+            //}
+            if (!replaced)
+            {
+                _items[hash] = null;
+            }
         }
         else
         {
