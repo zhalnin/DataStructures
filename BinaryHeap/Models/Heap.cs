@@ -15,7 +15,10 @@ internal class Heap<T>: IEnumerable<T> where T : IComparable<T>
     public Heap(List<T> items)
     {
         _items.AddRange(items);
-        Sort(0);
+        for (int i = Count; i >= 0; i--)
+        {
+            Sort(i);
+        }
     }
 
     public T Peek()
