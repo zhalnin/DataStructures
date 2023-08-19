@@ -1,16 +1,15 @@
 ﻿namespace Graph.Models;
 
-internal class Graphe
+internal sealed class Graphe
 {
-    List<Vertex> vertexes = new List<Vertex>();
-    List<Edge> edges = new List<Edge>();
+    readonly List<Vertex> vertexes = new();
+    readonly List<Edge> edges = new();
+
     public int VertexesCount => vertexes.Count;
     public int EdgesCount => edges.Count;
 
-    public void AddVertex(Vertex vertex)
-    {
+    public void AddVertex(Vertex vertex) =>
         vertexes.Add(vertex);
-    }
 
     public void CreateEdge(Vertex from, Vertex to)
     {
@@ -18,10 +17,8 @@ internal class Graphe
         AddEdge(edge);
     }
 
-    public void AddEdge(Edge edge)
-    {
+    public void AddEdge(Edge edge) =>
         edges.Add(edge);
-    }
 
     public int[,] GetMatrix()
     {
@@ -38,7 +35,7 @@ internal class Graphe
         return matrix;
     }
 
-    public List<Vertex> GetVertexLists(Vertex vertex)
+    public List<Vertex> GetVertexLists2(Vertex vertex)
     {
         var result = new List<Vertex>();
         foreach (var edge in edges)
@@ -49,6 +46,17 @@ internal class Graphe
             }
         }
         return result;
+    }
+    
+    public IEnumerable<Vertex> GetVertexLists(Vertex vertex)
+    {
+        foreach (var edge in edges)
+        {
+            if(edge.From == vertex)
+            {
+                yield return edge.To;
+            }
+        }
     }
 
     public bool Wave2(Vertex start, Vertex end)

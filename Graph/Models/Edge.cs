@@ -1,6 +1,6 @@
 ﻿namespace Graph.Models;
 
-internal class Edge
+internal sealed class Edge
 {
     public Vertex From { get; set; }
     public Vertex To { get; set; }
@@ -14,8 +14,6 @@ internal class Edge
         Weight = weight;
     }
 
-    public override string ToString()
-    {
-        return $"({From}; {To})";
-    }
+    public override string ToString() =>
+        $"({From}; {To})";
 }

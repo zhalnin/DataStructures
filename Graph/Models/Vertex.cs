@@ -1,18 +1,14 @@
 ﻿namespace Graph.Models;
 
-internal class Vertex
+internal sealed class Vertex
 {
     public int Number { get; set; }
 
     public bool Visited { get; set; }
 
-    public Vertex(int number)
-    {
+    public Vertex(int number) =>
         Number = number;
-    }
 
-    public override string ToString()
-    {
-        return Number.ToString();
-    }
+    public override string ToString() =>
+        Number.ToString();
 }

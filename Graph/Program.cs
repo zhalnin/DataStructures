@@ -41,11 +41,11 @@ GetVertex(graph, v5);
 GetVertex(graph, v6);
 GetVertex(graph, v7);
 
-Console.WriteLine(graph.Wave(v1,v5));
-//Console.WriteLine(graph.Wave(v2,v4));
+Console.WriteLine(graph.Wave(v1, v5));
+Console.WriteLine(graph.Wave(v2, v4));
 
 Console.WriteLine(graph.Wave2(v1,v5));
-//Console.WriteLine(graph.Wave2(v2,v4));
+Console.WriteLine(graph.Wave2(v2,v4));
 
 
 Console.WriteLine(graph.Deep(v1, v5));

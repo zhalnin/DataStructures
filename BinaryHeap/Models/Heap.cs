@@ -7,10 +7,7 @@ internal class Heap<T>: IEnumerable<T> where T : IComparable<T>
     private List<T> _items = new List<T>();
     public int Count => _items.Count;
 
-    public Heap()
-    {
-
-    }
+    public Heap() { }
 
     public Heap(List<T> items)
     {
